@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def create
   	# method to create new user
+    User.create user_params
   end
 
   def show
