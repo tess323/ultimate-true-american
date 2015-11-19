@@ -1,11 +1,11 @@
 class PlayersController < ApplicationController
   # def index
   # end
-  before_action :current_user
+  before_action :is_authenticated?
   def create
     # same view as create game view, allows user to add player usernames to game
-  
-  Player.create player_params
+    Player.create player_params
+    redirect_to player_path
   end
 
   def new
@@ -24,7 +24,7 @@ class PlayersController < ApplicationController
 
   def destroy
     # delete a player from current game
-     Player.find(params[:id]).delete
+    Player.find(params[:id]).delete
     redirect_to player_path
   end
 
