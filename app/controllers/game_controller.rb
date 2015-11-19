@@ -3,6 +3,7 @@ class GameController < ApplicationController
     # join game page where players add aliases, random number generator for teams, start game button
     @games = Game.all
   end
+  
 
   def create
     # creates the game/adds to database, no view
