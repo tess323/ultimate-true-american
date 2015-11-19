@@ -7,7 +7,7 @@ class GameController < ApplicationController
   def create
     # creates the game/adds to database, no view
     Game.create game_params
-    redirect_to game_path
+    redirect_to players_path
   end
 
   def new
