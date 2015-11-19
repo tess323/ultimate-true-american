@@ -15,6 +15,10 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   get 'logout' => 'sessions#destroy'
 
+  #game_session controller
+  get 'startgame' => 'game_session#new'
+  post 'startgame' => 'game_session#create'
+  get 'endgame' => 'game_session#destroy'
   # game controller
   get 'game/index'
   get 'game/create'
