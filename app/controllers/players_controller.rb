@@ -6,11 +6,14 @@ before_action :is_authenticated?
   def create
     # same view as create game view, allows user to add player usernames to game
     player = Player.create player_params
+    player.update_columns(game_id: params[:game_id])
     redirect_to "/game/"+ params[:game_id]
   end
 
   def new
     @player = player.new
+     # @player.update_columns(game_id:, [)
+     # @player.update_columns(game_id: params[@game.id])
   end
 
   # def edit 
@@ -21,6 +24,7 @@ before_action :is_authenticated?
 
   def update
      # when users change their alias on the join game page (game index)
+
   end
 
   def destroy
