@@ -26,7 +26,6 @@ before_action :is_authenticated?
   def show
     @game = Game.find(params[:id])
     session[:game_id] = @game.id
-    puts session[:user_id]
   end
 
   # def update
