@@ -33,6 +33,7 @@ class GameController < ApplicationController
     redirect_to profile_path
   end
 
+
   private
 
   def game_params
