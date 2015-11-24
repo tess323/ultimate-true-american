@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
 end
 
 def destroy
+  # if not a current user redirect to root
   session[:user_id] = nil
   redirect_to root_path
 

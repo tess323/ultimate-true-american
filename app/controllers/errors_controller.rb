@@ -1,4 +1,5 @@
 class ErrorsController < ApplicationController
+	# defining routes for error pages
   def not_found
     render(:status => 404)
   end

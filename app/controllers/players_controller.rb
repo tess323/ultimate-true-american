@@ -33,6 +33,7 @@ before_action :is_authenticated?
   end
 
   private
+  # protected player params
   def player_params
     params.require(:player).permit(:username, :alias, :beers, :game_id)
   end

@@ -3,9 +3,10 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   
-  #auth stuff
+  # must be a user to view page
   before_action :current_user
 
+  # check if authenticated
   def is_authenticated?
     unless @current_user
       redirect_to root_path
